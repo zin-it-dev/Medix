@@ -1,0 +1,12 @@
+{% extends 'admin/base.html' %} {% block content %}
+<div>
+  <h1>Import {{ model_name }}</h1>
+  <form method="POST" enctype="multipart/form-data" novalidate>
+    {{ form.as_p }} {% csrf_token %}
+
+    <input type="submit" class="default" value="Upload" />
+  </form>
+</div>
+<br />
+
+{% endblock %}
